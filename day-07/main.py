@@ -24,8 +24,7 @@ for position in unique_positions:
     fuel_amount = 0
     for crab in crabs:
         distance = abs(position - crab)
-        for i in range(distance, 0, -1):
-            fuel_amount += i
+        fuel_amount += int(distance * (distance + 1) / 2)
     if fuel_amount < min_fuel:
         min_fuel = fuel_amount
 
